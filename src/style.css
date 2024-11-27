@@ -10,23 +10,41 @@ body {
   border: 1px solid black;
   border-radius: 10px;
   position: relative;
-}
-.top-suit {
-  position: absolute;
-  top: -5px;
-  left: 20px;
-  font-size: 80px;
-}
-.bottom-suit {
-  position: absolute;
-  bottom: -5px;
-  right: 20px;
-  font-size: 80px;
-}
-.number {
-  font-size: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 400px;
+  &:before {
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    font-size: 80px;
+  }
+  &:after {
+    position: absolute;
+    bottom: -5px;
+    right: 20px;
+    font-size: 80px;
+  }
+  .number {
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 400px;
+  }
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+  }
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+  }
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+  }
 }
